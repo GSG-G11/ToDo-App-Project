@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo App Project</title>
+</head>
+<body>
+    <header>
+        <img src="img/banner.jpg" alt="banner">
+        <h1>ToDo App</h1>
+        <div class="AddingToDo"> 
+            <input type="text" id="title" name="title" placeholder="Title" required/><br>
+            <textarea id="description" name="description" rows="10" cols="30" placeholder="Description" required></textarea><br>
+            <input type="time" id="time" name="time" placeholder="Time" required/><br>
+            <button type="button" class="add" id="add" onclick="todo();">Add</button>
+        </div> 
+    </header>
+    <main>
+        <div class="container">
+            <h2>My toDo</h2>
+            <div class="MyToDo">
+                <div class="mainMyToDo" id="mainMyToDo1">
+                    <i></i>
+                    <button type="button" id="end" class="end" onclick="check('i');"><i id="i" class="fa fa-check"style="visibility='hidden'"></i></button>
+                    <p class="titleMyToDo" id="titleMyToDo1"> 
+                        toDo 1
+                    </p>
+                    <p class="timeMyToDo" id="timeMyToDo1"> 
+                        Time 
+                    </p>                    
+                    <p class="descriptionMyToDo" id="descriptionMyToDo1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar imperdiet sed auctor id libero dolor aenean auctor malesuada.                    
+                    </p>
+                    <button type="button" id="edit" class="edit">Edit</button>
+                    <button type="button" id="delete" class="delete" onclick=" deleteToDo('mainMyToDo1');">Delete</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
